@@ -1,0 +1,12 @@
+FROM node:22-alpine
+
+WORKDIR /usr/src/app
+
+# répartoire courant contient code source
+# répertoire destination définit
+COPY . .
+
+# 1 fois lors du build
+RUN npm i
+
+CMD ["npm","run","dev"]

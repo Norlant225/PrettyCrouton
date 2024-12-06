@@ -1,0 +1,9 @@
+FROM nginx:1.27-alpine
+
+WORKDIR /usr/share/nginx/html
+WORKDIR /etc/nginx
+
+COPY /nginx /etc/nginx/
+COPY dist/ /usr/share/nginx/html
+
+# CMD : pas besoin de la commande pour démarrer nginx car image nginx contient la commande pour démarrer
